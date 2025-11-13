@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <h2>Buscar filme pelo título</h2>
+
+    <!-- FORM -->
+    <form [formGroup]="formTitle" class="row g-3">
+        <div class="col-md-6">
+            <label for="title" class="form-label">Título</label>
+            <input type="string" id="title" formControlName="title" class="form-control" required>
+        </div>
+
+        <div class="col-12">
+            <button type="button" [disabled]="formTitle.invalid" class="btn btn-primary" (click)="search()">
+                Buscar
+            </button>
+        </div>
+    </form>
+
+    <!-- TABELA -->
+    <div class="mt-4">
+        <table class="table table-striped table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Título</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col">Tempo</th>
+                    <th scope="col">Gênero</th>
+                    <th scope="col">Rated</th>
+                    <th scope="col">Diretor</th>
+                    <th scope="col">Plot</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ film.Title }}</td>
+                    <td>{{ film.Year  }}</td>
+                    <td>{{ film.Runtime  }}</td>
+                    <td>{{ film.Genre }}</td>
+                    <td>{{ film.Rated }}</td>
+                    <td>{{ film.Director }}</td>
+                    <td>{{ film.Plot }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

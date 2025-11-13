@@ -1,0 +1,8 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.nav-link {
+  margin-left: 10px;
+}
+.nav-link.fw-bold {
+  text-decoration: underline;
+}
